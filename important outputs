@@ -1,0 +1,27 @@
+class Derived  
+{ 
+    public void getDetails() 
+    { 
+        System.out.println("Derived class"); 
+    } 
+} 
+  
+public class Test extends Derived 
+{ 
+    protected void getDetails() 
+    { 
+        System.out.println("Test class"); 
+    } 
+    public static void main(String[] args) 
+    { 
+        Derived obj = new Test();  // line xyz 
+        obj.getDetails(); 
+    } 
+} 
+a) Test class
+b) Compilation error due to line xyz
+c) Derived class
+d) Compilation error due to access modifier
+
+Ans: (d)
+Explanation: The overriding method can not have more restrictive access modifier.
